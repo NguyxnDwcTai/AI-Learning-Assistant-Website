@@ -24,7 +24,7 @@ const protect = async (req, res, next) => {
           statusCode: 401,
         });
       }
-      next();
+      return next();
     } catch (error) {
       console.error("Auth middleware error:", error);
 
@@ -35,7 +35,7 @@ const protect = async (req, res, next) => {
           statusCode: 401,
         });
       }
-      res.status(401).json({
+      return res.status(401).json({
         success: false,
         error: "Not authorized. Invalid token.",
         statusCode: 401,

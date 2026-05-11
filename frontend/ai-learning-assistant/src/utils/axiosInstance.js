@@ -15,7 +15,12 @@ axiosInstance.interceptors.request.use(
     (config) => {
         const accessToken = localStorage.getItem("token");
         if (accessToken) {
-            config.headers.Authorization = `Bearer ${accessToken}`;
+            // Use set method if available (AxiosHeaders), otherwise fallback to bracket notation
+            if (config.headers && typeof config.headers.set === 'function') {
+                config.headers.set('Authorization', `Bearer ${accessToken}`);
+            } else {
+                config.headers['Authorization'] = `Bearer ${accessToken}`;
+            }
         }
         return config;
     },
