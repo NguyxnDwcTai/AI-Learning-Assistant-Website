@@ -10,7 +10,7 @@
   <br />
   
   <h1>🤖 AI-Powered Learning Assistant Website</h1>
-  <p>An intelligent platform designed to accelerate learning through AI-driven document analysis, interactive flashcards, quizzes, and a smart chatbot powered by Google Gemini AI.</p>
+  <p>An intelligent platform designed to accelerate learning through AI-driven document analysis, interactive flashcards, quizzes, and a smart chatbot powered by AI.</p>
 </div>
 
 ---
